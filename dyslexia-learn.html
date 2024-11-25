@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DyslexiaLearn - Dyslexia Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </nav>
+        <div id="dyslexia-learn" class="page active">
+            <h1>DyslexiaLearn Adventure</h1>
+            <button id="practice-reading" class="btn btn-green">Practice Reading</button>
+            <button id="play-word" class="btn btn-yellow">Play Word</button>
+            <button id="new-word-dyslexia" class="btn btn-purple">New Word</button>
+            <div id="word-blocks"></div>
+            <textarea id="sorted-word" placeholder="Drag and drop letters here or type..."></textarea>
+            <button id="check-word" class="btn btn-green">Check Word</button>
+            <textarea id="progress-text" placeholder="Your progress will appear here..."></textarea>
+            <button id="read-aloud" class="btn btn-indigo">Read Aloud</button>
+            <div class="progress-container">
+                <div class="progress-label">Learning Progress: <span id="progress-value">0</span>%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <button id="toggle-settings" class="btn btn-yellow">Settings</button>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <div class="setting">
+                    <label for="font-size">Font Size</label>
+                    <input type="range" id="font-size" min="14" max="32" step="2" value="18">
+                </div>
+                <div class="setting">
+                    <label for="line-spacing">Line Spacing</label>
+                    <input type="range" id="line-spacing" min="1" max="2.5" step="0.1" value="1.5">
+                </div>
+                <div class="setting">
+                    <label for="speech-rate">Speech Rate</label>
+                    <input type="range" id="speech-rate" min="0.5" max="1.5" step="0.1" value="0.7">
+                </div>
+                <div class="setting">
+                    <label for="use-dyslexic-font">Use OpenDyslexic Font</label>
+                    <input type="checkbox" id="use-dyslexic-font" checked>
+                </div>
+                <div class="setting">
+                    <label for="high-contrast">High Contrast Mode</label>
+                    <input type="checkbox" id="high-contrast">
+                </div>
+                <button id="close-settings" class="btn btn-blue">Close Settings</button>
+            </div>
+        </div>
+    </div>
+    <script src="dyslexia-learn.js"></script>
+</body>
+</html>

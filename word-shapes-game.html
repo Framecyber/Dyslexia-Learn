@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Shapes Game - Dyslexia Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </nav>
+        <div id="word-shapes-game" class="page active">
+            <h1 class="game-title">Word Shapes Game</h1>
+            <p class="word-shape-label">Word Shape:</p>
+            <div id="word-shape" class="word-shape-container"></div>
+            <button id="speak-word" class="btn btn-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.536 14.01a.75.75 0 0 0 1.06 0 7.5 7.5 0 0 0 0-10.607.75.75 0 0 0-1.06 1.06 6 6 0 0 1 0 8.485.75.75 0 0 0 0 1.061zm-2.122-2.122a.75.75 0 1 0 1.06-1.061 3 3 0 0 0 0-4.243.75.75 0 1 0-1.06 1.06 1.5 1.5 0 0 1 0 2.122.75.75 0 0 0 0 1.06z"></path>
+                    <path d="M7.5 2.927a.75.75 0 0 0-1.06-.67l-4.5 2.25A.75.75 0 0 0 1 5.75v4.5a.75.75 0 0 0 .44.673l4.5 2.25a.75.75 0 0 0 1.06-.67V2.927z"></path>
+                </svg>
+                Hear the Word
+            </button>
+            <input type="text" id="word-input" placeholder="Type the word here" class="word-input">
+            <button id="submit-word" class="btn btn-blue">Submit Answer</button>
+            <div class="score-section">
+                <span>Score: <span id="score-value">0</span>/<span id="total-attempts">0</span></span>
+            </div>
+            <button id="new-word" class="btn btn-yellow">New Word</button>
+            <div class="progress-container">
+                <div class="progress-label">Progress: <span id="progress-value">0</span>%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="word-shapes-game.js"></script>
+</body>
+</html>
